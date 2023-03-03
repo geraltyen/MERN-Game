@@ -14,6 +14,7 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    Image,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -21,14 +22,17 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+import { useState } from 'react';
   
   export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
-  
+    const [islogin,setIslogin]=useState(true)
+    
     return (
       <Box>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
+        
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
           py={{ base: 2 }}
@@ -55,8 +59,8 @@ import {
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              Logo
             </Text>
+            <Image src='https://th.bing.com/th/id/R.0cce35d2c60af724c6b27ac32f4a676b?rik=Z99r1aYPi7inDg&riu=http%3a%2f%2f31.media.tumblr.com%2fda656cb4ff0c55d7ac6b3cf17487effb%2ftumblr_mlw0fnN04Z1s86yr3o1_500.gif&ehk=CNmErs0L7%2bR9rQvDQr1OzBnXzLc4YUBKtpKQHlH713k%3d&risl=&pid=ImgRaw&r=0' style={{width:"30px"}}/>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -71,21 +75,27 @@ import {
             <Button
               as={'a'}
               fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
+              fontWeight={600}
+              bg={'skyblue'}
+              color={"black"}
+              _hover={{
+                color:"white",
+                bg: 'blue',
+              }}
               href={'#'}>
-              Sign In
+              {islogin?"Log Out":"Log In"}
             </Button>
             <Button
               as={'a'}
-              display={{ base: 'none', md: 'inline-flex' }}
+              
               fontSize={'sm'}
               fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
-              href={'#'}
+              color={'black'}
+              bg={'skyblue'}
+              href={'/signup'}
               _hover={{
-                bg: 'pink.300',
+                color:"white",
+                bg: 'blue',
               }}>
               Sign Up
             </Button>
@@ -252,25 +262,10 @@ import {
   
   const NAV_ITEMS: Array<NavItem> = [
     {
-      label: 'Inspiration',
-      children: [
-        {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
-          href: '#',
-        },
-        {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
-        },
-      ],
+      label: 'Top Scorer',
     },
     {
-      label: 'Find Work',
-    },
-    {
-      label: 'Learn Design',
+      label: 'Diamonds',
       href: '#',
     },
     {
