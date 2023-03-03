@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+
+
+
 const images = [
   {
     url: "https://images.unsplash.com/photo-1677697752978-2741925ea212?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
@@ -20,8 +23,8 @@ const images = [
 ];
 
 function Animated() {
-  const [showImage, setShowImage] = useState:any(false);
-  const [image, setImage] = useState(null);
+  const [showImage, setShowImage] = useState(false);
+  const [image, setImage] = useState<any>("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
