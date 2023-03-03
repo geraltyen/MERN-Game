@@ -39,7 +39,7 @@ const Counter = () =>{
     return (
         <div className="container">
                 <h2 className="score">LEVEL :  {level}</h2>
-                <h1 className="maingame">Count Score</h1>
+                <h1 className="maingame">Total Score</h1>
                 <h2 className="score">{count}</h2>
                 <div>
                     <button className="btn1"
