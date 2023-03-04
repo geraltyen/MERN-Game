@@ -1,0 +1,57 @@
+.mainhome{
+    height: 85vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #04fafd 5%, #119dff 50%, #030423);
+    /* background-image: url("https://ksassets.timeincuk.net/wp/uploads/sites/54/2019/09/playstation-background-image-yu-1.jpg"); */
+}
+
+
+
+.hmpage{
+    width: 100%;
+    font-size: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainhome .bubblediv{
+    height: 6vw;
+    width: 6vw;
+    border: 2px soild rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+}
+
+.bubblediv .bubble{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* .h_btn{
+    background-color: blue;
+    color: wheat;
+    font-size: 3vw;
+    padding: 15px 15px;
+    border-radius: 4px;
+   margin-right: 30px;
+    margin-top: 30%;
+    
+}
+.h_btn2{
+    background-color: blue;
+    color: wheat;
+    padding: 4px 5px;
+    border-radius: 4px;
+    margin-top: auto;
+} */
+/* .h-btn:hover{
+    animation: all ease-in-out 2000ms ;
+    background-color: brown;
+   
+} */
