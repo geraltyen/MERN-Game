@@ -5,6 +5,7 @@ import Game from '../Components/game'
 import Homepage from '../Components/Homepage'
 import LoginCard from '../Components/LoginCard'
 import Ownfile from '../Components/Ownfile'
+import Leaderboard from '../Route/Leaderboard'
 import Signin from '../Route/Signin'
 // import SignupCard from '../Components/signup'
 import Signup from '../Route/Signup'
@@ -20,6 +21,7 @@ const AllRoutes = (props: Props) => {
         <Route path='/diamonds' element={<Diamonds/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Signin/>}/>
+        <Route path="/leaderboard" element={<Leaderboard/>}/>
     </Routes>
         
     </div>

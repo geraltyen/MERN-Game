@@ -286,8 +286,8 @@ const back =()=>{
   
   const NAV_ITEMS: Array<NavItem> = [
     {
-      label: 'Top Scorer',
-      href:"/Scoreboard"
+      label: 'Leaderboard',
+      href:"/leaderboard"
     },
     {
       label: 'Diamonds',

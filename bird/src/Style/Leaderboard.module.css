@@ -37,6 +37,7 @@ table {
     font-size: 2vw;
     font-weight: 600;
     color: white;
+    text-align: center;
     border-radius: 10px;
     background-color: rgba(57, 46, 74);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
