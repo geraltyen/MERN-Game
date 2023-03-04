@@ -4,8 +4,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Game from './components/game';
 import Homepage from './components/Homepage';
-import Animated from './components/Animated';
 import Footer from './components/Footer';
+import AllRoutes from './Routes/AllRoutes';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       {/* <Animated/> */}
       {/* <Game /> */}
       {/* <Footer/> */}
-      
+      <AllRoutes />
     </>
   );
 }

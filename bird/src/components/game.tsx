@@ -1,7 +1,8 @@
-import { Box, Button, Image, Text, useBoolean, useToast } from '@chakra-ui/react'
+import { Box, Button, Image, Text, useToast } from '@chakra-ui/react'
 import { useEffect, useState } from 'react';
 
 const Game = () => {
+
 
 
     const [imageArray, setImageArray] = useState([
@@ -12,8 +13,9 @@ const Game = () => {
 
     const [randomImage, setRandomImage] = useState<any>("");
     const [isVisible, setIsVisible] = useState(false);
-
+    const toast=useToast();
     const [countdown, setCountdown] = useState(5);
+    const [point,setPoint]=useState<any>(0);
 
 
     //countdown timer
@@ -30,6 +32,8 @@ const Game = () => {
     }, [countdown]);
 
 
+    
+
     //animated images
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * imageArray.length);
@@ -45,17 +49,13 @@ const Game = () => {
 
     const isDisabled = countdown === 0;
 
-    
+
     const handleButtonClick = () => {
         setCountdown(5);
     };
 
     const handleReload = () => {
         window.location.reload();
-    }
-
-    const handleAlerr = () => {
-        alert("clicked")
     }
 
     const twoFunction = () => {
@@ -66,7 +66,14 @@ const Game = () => {
 
     const handleButtonTrue = () => {
         if ((randomImage && randomImage.isSelected === true)) {
-            alert('Matched!');
+            
+            toast({
+                title: 'Round 1 cleared',
+                description: "Go to next round",
+                status: 'success',
+                duration: 2000,
+                isClosable: true,
+              })
         } else {
             alert('Not matched!');
         }
@@ -96,6 +103,8 @@ const Game = () => {
                     textAlign="center"
                     fontSize="6xl"
                 >{countdown}</Text>
+
+                {/* <Text>{allgamePoint}</Text> */}
                 <Button onClick={twoFunction} >Start Countdown</Button>
                 <Button ml="20px" onClick={handleReload}>Restart</Button>
             </Box>
@@ -106,9 +115,6 @@ const Game = () => {
                 h={{ base: "150px", sm: "150px", md: "300px", lg: "500px" }}
                 display="flex"
                 margin="auto"
-            // justifyContent="center"
-            // alignItems="center"
-            // w={{ base: "320px", sm: "320px", md: "700px", lg: "1440px" }}
             >
                 {
                     randomImage && isVisible && (
