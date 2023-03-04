@@ -8,8 +8,8 @@ function App() {
   return (
     <div className={styles.App}>
       <ChakraProvider>
-      <Signin/>
-      {/* <Signup/> */}
+      <Signup/>
+      {/* <Signin/> */}
       </ChakraProvider>
     </div>
   );
