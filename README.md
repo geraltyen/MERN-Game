@@ -20,7 +20,7 @@ Sukanta Pramanik
 
 
 💻Unique Project Name & logo :- CHIDIYA UD
-![CRuise (1)-modified]()
+![gamelogo](https://user-images.githubusercontent.com/105841421/222919354-13f8e81e-bd21-4050-a06a-d293a325e3fc.png)
 
 
 ## 💫Tech-Stack->
