@@ -13,6 +13,7 @@
     animation-name: box;
     animation-timing-function: ease-in;
     animation-duration: 3s;
+    animation-delay: 1s;
     transform: translateY(-240px);
 }
 
