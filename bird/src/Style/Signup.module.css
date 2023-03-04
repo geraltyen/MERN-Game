@@ -1,5 +1,5 @@
 .SigupContainer{
-    background: linear-gradient(90deg, rgba(163, 160, 169), rgba(227, 61, 148));
+    background: linear-gradient(90deg, rgba(163, 160, 169), rgba(110, 48, 75, 1));
     flex-direction: column;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .innerContainer{
-    background: linear-gradient(90deg, rgba(163, 160, 169), rgba(227, 61, 148));
+    background: linear-gradient(90deg, rgba(163, 160, 169), rgba(110, 48, 75, 1));
 }
 
 
