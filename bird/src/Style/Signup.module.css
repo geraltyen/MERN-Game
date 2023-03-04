@@ -1,0 +1,39 @@
+.SigupContainer{
+    background: linear-gradient(90deg, rgba(163, 160, 169), rgba(110, 48, 75, 1));
+    flex-direction: column;
+}
+
+.container{
+    position: absolute;
+    margin-top: 5vw;
+}
+
+.box{
+    position: relative;
+    animation-name: box;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    transform: translateY(-240px);
+}
+
+.innerContainer{
+    background: linear-gradient(90deg, rgba(163, 160, 169), rgba(110, 48, 75, 1));
+}
+
+
+.signupbutton{
+    background: rgba(110, 48, 75, 1);
+}
+
+@keyframes box {
+    from {
+        transform: translateY(0px);
+        opacity: 0%;
+    }
+
+    to {
+        transform: translateY(-240px);
+        opacity: 100%;
+    }
+}
