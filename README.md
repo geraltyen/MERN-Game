@@ -19,6 +19,9 @@ Sukanta Pramanik
 
 
 
+💻Unique Project Name & logo :- CHIDIYA UD
+![CRuise (1)-modified]()
+
 
 ## 💫Tech-Stack->
 
