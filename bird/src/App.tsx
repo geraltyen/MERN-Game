@@ -6,12 +6,11 @@ import Game from './components/game';
 import Button from "./components/Button";
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
-<<<<<<< HEAD
-import AllRoutes from './Routes/AllRoutes';
-=======
-import AllRoutes from './Allroutes/Routes';
+
+
 import Ownfile from './components/Ownfile';
->>>>>>> 89fe714c6c386a6c842f7fa2f52766bdcc3f97b9
+import AllRoutes from './Allroutes/Routes';
+
 
 
 function App() {
@@ -19,16 +18,14 @@ function App() {
     <>
       
       <Navbar/>
-<<<<<<< HEAD
+
       {/* <Homepage/> */}
       {/* <Animated/> */}
       {/* <Game /> */}
       {/* <Footer/> */}
       <AllRoutes />
-=======
-      <AllRoutes/>
+
       
->>>>>>> 89fe714c6c386a6c842f7fa2f52766bdcc3f97b9
     </>
   );
 }
