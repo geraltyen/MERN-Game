@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .moving-image {
+    height: 100%;
+    width: 30%;
+    border-radius: 30%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    animation: move-right 5s linear infinite;
+  }
+  
+  @keyframes move-right {
+    from {
+      left: 0;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+
+  .o-main{
+    background-image: url("https://media.playstation.com/is/image/SCEA/ps4-pro-god-of-war-pro-bundle-banner-bg-01-us-09mar18?$native_nt$");
+    padding: 10%;
+    color: white;
+    height: 100vh;
+  }

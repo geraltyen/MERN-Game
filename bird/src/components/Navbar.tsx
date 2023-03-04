@@ -23,11 +23,20 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
   
+
+let audio2= new Audio("/back.mp3")
+const back =()=>{
+  audio2.play()
+}
+
   export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
     const [islogin,setIslogin]=useState(true)
-    
+    const route=useNavigate()
+   
+
     return (
       <Box>
         <Flex
@@ -60,7 +69,7 @@ import { useState } from 'react';
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
             </Text>
-            <Image src='https://th.bing.com/th/id/R.0cce35d2c60af724c6b27ac32f4a676b?rik=Z99r1aYPi7inDg&riu=http%3a%2f%2f31.media.tumblr.com%2fda656cb4ff0c55d7ac6b3cf17487effb%2ftumblr_mlw0fnN04Z1s86yr3o1_500.gif&ehk=CNmErs0L7%2bR9rQvDQr1OzBnXzLc4YUBKtpKQHlH713k%3d&risl=&pid=ImgRaw&r=0' style={{width:"30px"}}/>
+            <Image _hover={{cursor:"pointer",boxShadow:" rgba(0, 0, 0, 0.24) 0px 3px 8px"}} src='https://th.bing.com/th/id/R.0cce35d2c60af724c6b27ac32f4a676b?rik=Z99r1aYPi7inDg&riu=http%3a%2f%2f31.media.tumblr.com%2fda656cb4ff0c55d7ac6b3cf17487effb%2ftumblr_mlw0fnN04Z1s86yr3o1_500.gif&ehk=CNmErs0L7%2bR9rQvDQr1OzBnXzLc4YUBKtpKQHlH713k%3d&risl=&pid=ImgRaw&r=0' style={{width:"35px",padding:"5px"}} onClick={()=>{route("/")}}/>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -82,7 +91,7 @@ import { useState } from 'react';
                 color:"white",
                 bg: 'blue',
               }}
-              href={'#'}>
+              href={islogin?"/":'/login'}>
               {islogin?"Log Out":"Log In"}
             </Button>
             <Button
@@ -122,10 +131,12 @@ import { useState } from 'react';
               <PopoverTrigger>
                 <Link
                   p={2}
+                  onClick={()=>{back()}}
                   href={navItem.href ?? '#'}
                   fontSize={'sm'}
                   fontWeight={500}
                   color={linkColor}
+                  
                   _hover={{
                     textDecoration: 'none',
                     color: linkHoverColor,
@@ -140,6 +151,7 @@ import { useState } from 'react';
                   boxShadow={'xl'}
                   bg={popoverContentBgColor}
                   p={4}
+                  onClick={back}
                   rounded={'xl'}
                   minW={'sm'}>
                   <Stack>
@@ -263,10 +275,11 @@ import { useState } from 'react';
   const NAV_ITEMS: Array<NavItem> = [
     {
       label: 'Top Scorer',
+      href:"/Scoreboard"
     },
     {
       label: 'Diamonds',
-      href: '#',
+      href: '/diamonds',
     },
     {
       label: `SCORE`,

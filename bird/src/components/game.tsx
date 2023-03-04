@@ -1,6 +1,8 @@
 import { Box, Button, Image, Text, useToast } from '@chakra-ui/react'
 import { useEffect, useState } from 'react';
 
+let score:any=localStorage.getItem("score")
+
 const Game = () => {
 
 
@@ -13,7 +15,11 @@ const Game = () => {
 
     const [randomImage, setRandomImage] = useState<any>("");
     const [isVisible, setIsVisible] = useState(false);
+
     const toast=useToast();
+
+    const [level,setLevel]=useState(score)
+    
     const [countdown, setCountdown] = useState(5);
     const [point,setPoint]=useState<any>(0);
 
@@ -55,6 +61,7 @@ const Game = () => {
     };
 
     const handleReload = () => {
+        // localStorage.removeItem("score")
         window.location.reload();
     }
 
@@ -67,21 +74,27 @@ const Game = () => {
     const handleButtonTrue = () => {
         if ((randomImage && randomImage.isSelected === true)) {
             
-            toast({
-                title: 'Round 1 cleared',
-                description: "Go to next round",
-                status: 'success',
-                duration: 2000,
-                isClosable: true,
-              })
+            let res=JSON.parse(score)
+
+            localStorage.setItem("score",JSON.stringify(res+10))
+            alert('Matched!');
+            setLevel(score)
         } else {
+            localStorage.removeItem("score")
+            setLevel(0)
             alert('Not matched!');
         }
     };
     const handleButtonFalse = () => {
         if ((randomImage && randomImage.isSelected === false)) {
+            let res=JSON.parse(score)
+
+            localStorage.setItem("score",JSON.stringify(res+10))
+            setLevel(score)
             alert('Matched!');
         } else {
+            localStorage.removeItem("score")
+            setLevel(0)
             alert('Not matched!');
         }
     };
@@ -91,6 +104,7 @@ const Game = () => {
             w={{ base: "320px", sm: "320px", md: "700px", lg: "1440px" }}
             h={{ base: "320px", sm: "320px", md: "300px", lg: "400px" }}
         >
+            <button>{level}</button>
 
             <Box
                 position="absolute"
