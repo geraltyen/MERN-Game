@@ -18,6 +18,7 @@ import {
   } from '@chakra-ui/react';
   import { useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { useNavigate } from "react-router-dom";
   
  const Signup = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -25,6 +26,7 @@ import {
     const [lname, setLname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate=useNavigate();
 
     const handleSubmit = () =>{
       const payload = {
@@ -40,7 +42,10 @@ import {
           "Content-type" : "application/json"
         }
       }).then(res=>res.json())
-      .then(res => console.log(res))
+      .then(res => {console.log(res)
+        navigate("/login") 
+    })
+      
       .catch(err=> console.log(err));
     }
   

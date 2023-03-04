@@ -127,7 +127,6 @@ function Ownfile() {
     <Box
       w={{ base: "320px", sm: "320px", md: "700px", lg: "1440px" }}
       h={{ base: "320px", sm: "320px", md: "300px", lg: "400px" }}
-      
     >
 
       <Box
