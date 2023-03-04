@@ -5,6 +5,11 @@ This is Mern stack game Developed Under 48 hrs with a team of 4
 [![Deploy to Cyclic](https://img.shields.io/badge/Deployed_Cyclic_Link-0A66C2?style=for-the-badge&logo=ko-fi&logoColor=white)](https://busy-lime-prawn-boot.cyclic.app/)
 
 
+[![Deployed App Vercel Link](https://img.shields.io/badge/Deployed_App_Vercel_Link-000?style=for-the-badge&logo=ko-fi&logoColor=white)]()
+[![Deployed Admin Vercel Link](https://img.shields.io/badge/Deployed_Admin_Vercel_Link-000?style=for-the-badge&logo=ko-fi&logoColor=white)]()
+
+
+----
 
 ## 🔗 Collaborators Profile Links✨
 
