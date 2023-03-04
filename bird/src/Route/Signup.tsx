@@ -100,10 +100,11 @@ import {
               </FormControl>
               <Stack spacing={10} pt={2}>
                 <Button
+                className={styles.signupbutton}
                 onClick={handleSubmit}
                   loadingText="Submitting"
                   size="lg"
-                  color={'black'}
+                  color={'white'}
                   _hover={{
                     bg: 'blue.500',
                   }}>

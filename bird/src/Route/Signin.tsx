@@ -14,9 +14,31 @@ import {
     Image,
     useColorModeValue,
   } from '@chakra-ui/react';
+import { useState } from "react";
 
   
  const Signin = () =>{
+  const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+  const handleSubmit = () =>{
+  const payload = {
+    email,
+    password
+  }
+  fetch("https://busy-lime-prawn-boot.cyclic.app/users/login", {
+    method:"POST",
+    body : JSON.stringify(payload),
+    headers:{
+      "Content-type" : "application/json"
+    }
+  }).then(res=>res.json())
+  .then(res => {
+    console.log(res);
+    localStorage.setItem("token",res.token);
+  })
+  .catch(err=> console.log(err));
+}
   
     return (
       <Flex
@@ -42,11 +64,11 @@ import {
             <Stack spacing={4}>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" />
+                <Input type="email" value={email} onChange = {(e)=>setEmail(e.target.value)} />
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Password</FormLabel>
-                <Input type="password" />
+                <Input type="password" value={password} onChange = {(e)=>setPassword(e.target.value)} />
               </FormControl>
               <Stack spacing={10}>
                 <Stack
@@ -58,7 +80,8 @@ import {
                 </Stack>
                 <Button
                   className={styles.signinbutton}
-                  color={'black'}
+                  onClick={handleSubmit}
+                  color={'white'}
                   _hover={{
                     bg: 'blue.500',
                   }}>

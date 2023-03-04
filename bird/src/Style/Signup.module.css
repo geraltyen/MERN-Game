@@ -22,9 +22,9 @@
 }
 
 
-/* .signupbutton{
-    background: linear-gradient(90deg, rgba(46, 49, 49), rgba(132, 140, 207));
-} */
+.signupbutton{
+    background: rgba(110, 48, 75, 1);
+}
 
 @keyframes box {
     from {
