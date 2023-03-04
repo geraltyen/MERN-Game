@@ -6,6 +6,7 @@ import Game from './components/game';
 import Homepage from './components/Homepage';
 import Animated from './components/Animated';
 import Footer from './components/Footer';
+import AllRoutes from './Allroutes/Routes';
 
 
 function App() {
@@ -13,9 +14,8 @@ function App() {
     <>
 
       <Navbar/>
-      <Homepage/>
-      <Animated/>
-      <Game />
+      <AllRoutes/>
+      
       <Footer/>
       
     </>

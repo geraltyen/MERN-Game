@@ -1,0 +1,20 @@
+.g-btn{
+    padding: 5px 15px;
+    font-size: 25px;
+    background-color: orange;
+    border-radius: 5px;
+    margin-left: 45vw ;
+    
+}
+.a-main{
+    width: 100%;
+
+}
+.img-div{
+    height: 300px;
+}
+.a-main img{
+    width: 20%;
+    height: 300px;
+    
+}

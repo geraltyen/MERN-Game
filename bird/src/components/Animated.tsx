@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+import "../styles/game.css"
+
+interface imagestype{
+  url:String,
+  alt:String
+}
 
 
-
-
-const images = [
+const images:imagestype[] = [
   {
     url: "https://images.unsplash.com/photo-1677697752978-2741925ea212?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
     alt: "Image 1",
@@ -23,9 +27,9 @@ const images = [
 ];
 
 function Animated() {
-  const [showImage, setShowImage] = useState(false);
+  const [showImage, setShowImage] = useState<Boolean>(false);
   const [image, setImage] = useState<any>("");
-
+  const [level,setLevel] = useState(5)
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowImage(false);
@@ -39,18 +43,23 @@ function Animated() {
     const randomImage = images[randomIndex];
     setImage(randomImage);
     setShowImage(true);
+    localStorage.setItem("game",JSON.stringify(image))
   }
 
   return (
-    <div>
-      <button onClick={handleClick}>Show Random Image</button>
-      {showImage && (
+    <div className="a-main">
+      <div className="img-div">
+       {showImage && (
         <img
           src={image.url}
           alt={image.alt}
-          style={{ animation: "fade-in-out 5s linear" }}
+          style={{ animation: `fade-in-out ${level}s linear` }}
         />
       )}
+      </div>
+
+      <button className="g-btn" onClick={handleClick}>NEXT</button>
+     
       <style>
         {`
           @keyframes fade-in-out {
