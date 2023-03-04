@@ -24,6 +24,7 @@ import {
   } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import styles from "../Style/Navbar.module.css";
 
 let loginKey = localStorage.getItem("token")
   
@@ -46,8 +47,8 @@ const back =()=>{
     return (
       <Box>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
-        
+          // bg={useColorModeValue('white', 'gray.800')}
+          className={styles.navContainer}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
           py={{ base: 2 }}
@@ -75,7 +76,7 @@ const back =()=>{
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
             </Text>
-            <Image _hover={{cursor:"pointer",boxShadow:" rgba(0, 0, 0, 0.24) 0px 3px 8px"}} src='https://th.bing.com/th/id/R.0cce35d2c60af724c6b27ac32f4a676b?rik=Z99r1aYPi7inDg&riu=http%3a%2f%2f31.media.tumblr.com%2fda656cb4ff0c55d7ac6b3cf17487effb%2ftumblr_mlw0fnN04Z1s86yr3o1_500.gif&ehk=CNmErs0L7%2bR9rQvDQr1OzBnXzLc4YUBKtpKQHlH713k%3d&risl=&pid=ImgRaw&r=0' style={{width:"35px",padding:"5px"}} onClick={()=>{route("/")}}/>
+            <Image _hover={{cursor:"pointer",boxShadow:" rgba(0, 0, 0, 0.24) 0px 3px 8px"}} src='gamelogo.png' style={{width:"6vw", height:"3vw"}} onClick={()=>{route("/")}}/>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -85,6 +86,7 @@ const back =()=>{
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
+            align={'center'}
             direction={'row'}
             spacing={6}>
             <Button
@@ -141,13 +143,12 @@ const back =()=>{
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link
-                  p={2}
+                  p={4}
                   onClick={()=>{back()}}
                   href={navItem.href ?? '#'}
-                  fontSize={'sm'}
-                  fontWeight={500}
-                  color={linkColor}
-                  
+                  fontSize={'md'}
+                  fontWeight={700}
+                  color={"white"}
                   _hover={{
                     textDecoration: 'none',
                     color: linkHoverColor,
@@ -161,7 +162,7 @@ const back =()=>{
                   border={0}
                   boxShadow={'xl'}
                   bg={popoverContentBgColor}
-                  p={4}
+                  p={2}
                   onClick={back}
                   rounded={'xl'}
                   minW={'sm'}>
