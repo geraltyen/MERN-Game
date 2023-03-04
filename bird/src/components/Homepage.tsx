@@ -2,6 +2,7 @@ import { Box, Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFoo
 import React, { useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "../styles/home.css"
+import Footer from './Footer'
 
 
 type Props = {}
@@ -57,8 +58,10 @@ const handleClick1=()=>{
         </div>
         
         
-
+        <Footer/>
+        
     </div>
+    
   )
 }
 

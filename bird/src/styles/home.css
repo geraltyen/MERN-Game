@@ -1,7 +1,7 @@
 .main-home{
     height: 85vh;
     width: 100vw;
-    background-image: url("https://images.creativemarket.com/0.1.0/ps/1437481/1280/640/m1/fpnw/wm0/game_background_21-.jpg?1468084190&s=0cb19d7f2ecc1bf3fd766646f6db5309");
+    background-image: url("https://ksassets.timeincuk.net/wp/uploads/sites/54/2019/09/playstation-background-image-yu-1.jpg");
 }
 
 
@@ -11,8 +11,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
 }
+
 .h-btn{
     background-color: tomato;
     color: white;

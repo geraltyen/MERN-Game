@@ -7,18 +7,15 @@ import Button from "./components/Button";
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 import AllRoutes from './Allroutes/Routes';
+import Ownfile from './components/Ownfile';
 
 
 function App() {
   return (
     <>
-
-      <Navbar/>
-      <Button/>
-      <Homepage/>
       
-      <Game />
-      <Footer/>
+      <Navbar/>
+      <AllRoutes/>
       
     </>
   );

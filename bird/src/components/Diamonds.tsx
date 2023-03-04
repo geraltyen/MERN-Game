@@ -12,11 +12,11 @@ const Diamonds = (props: Props) => {
     
     <div>
 
-      <h1 style={{textAlign:"center",fontSize:"30px",fontWeight:"500",color:"orangered"}}>Diamonds</h1>
+      <h1 style={{textAlign:"center",fontSize:"30px",fontWeight:"500",color:"orangered"}}>Welcome To Our Store</h1>
     <div className="dmain">
       <div className="d-cards" onClick={()=>{route("/payment")}}>
         <img src={d3} alt="img" />
-        <h2>Pouch of Diamonds <span style={{color:"blue",fontWeight:"700"}}> ₹ 100 </span></h2>
+        <h2>Handfull of Diamonds <span style={{color:"blue",fontWeight:"700"}}> ₹ 100 </span></h2>
         
       </div>
       <div className="d-cards" onClick={()=>{route("/payment")}}>
@@ -26,7 +26,7 @@ const Diamonds = (props: Props) => {
       </div>
       <div className="d-cards" onClick={()=>{route("/payment")}}>
         <img src={d2} alt="img" />
-        <h2>Pouch of Diamonds <span style={{color:"blue",fontWeight:"700"}}> ₹ 380 </span></h2>
+        <h2>Bag of Diamonds <span style={{color:"blue",fontWeight:"700"}}> ₹ 380 </span></h2>
         
       </div>
     </div>
