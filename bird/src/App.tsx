@@ -11,7 +11,7 @@ function App() {
       <ChakraProvider>
       {/* <Signup/> */}
       {/* <Signin/> */}
-      <Leaderboard />
+      {/* <Leaderboard /> */}
       </ChakraProvider>
     </div>
   );
