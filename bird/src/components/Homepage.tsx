@@ -1,8 +1,8 @@
 import { Box, Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "../styles/home.css"
-import Footer from './Footer'
+// import Footer from './Footer'
 
 
 type Props = {}
@@ -22,6 +22,10 @@ const Homepage = (props: Props) => {
   const back =()=>{
     audio2.play()
   }
+
+  // useEffect(()=>{
+
+  // },[])
 
 const handleClick1=()=>{
   route("/game")
@@ -58,7 +62,7 @@ const handleClick1=()=>{
         </div>
         
         
-        <Footer/>
+        {/* <Footer/> */}
         
     </div>
     

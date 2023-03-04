@@ -15,13 +15,16 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
   
  const Signin = () =>{
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
   const handleSubmit = () =>{
+    
   const payload = {
     email,
     password
@@ -36,8 +39,12 @@ import { useState } from "react";
   .then(res => {
     console.log(res);
     localStorage.setItem("token",res.token);
+    navigate("/");
+    window.location.reload();
   })
   .catch(err=> console.log(err));
+
+
 }
   
     return (

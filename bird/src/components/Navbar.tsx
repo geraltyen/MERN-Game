@@ -22,8 +22,10 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+let loginKey = localStorage.getItem("token")
   
 
 let audio2= new Audio("/back.mp3")
@@ -33,8 +35,12 @@ const back =()=>{
 
   export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
-    const [islogin,setIslogin]=useState(true)
-    const route=useNavigate()
+    const [islogin,setIslogin]=useState(loginKey)
+    const route=useNavigate();
+
+    // useEffect(()=>{
+      
+    // },[loginKey]);
    
 
     return (
@@ -91,8 +97,13 @@ const back =()=>{
                 color:"white",
                 bg: 'blue',
               }}
+              onClick={()=>{
+                if(islogin){
+                  localStorage.removeItem("token");
+                }
+              }}
               href={islogin?"/":'/login'}>
-              {islogin?"Log Out":"Log In"}
+              {islogin?"LogOut":"Log In"}
             </Button>
             <Button
               as={'a'}
