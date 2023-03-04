@@ -1,0 +1,36 @@
+.main-home{
+    height: 85vh;
+    width: 100vw;
+    background-image: url("https://ksassets.timeincuk.net/wp/uploads/sites/54/2019/09/playstation-background-image-yu-1.jpg");
+}
+
+
+
+.hmpage{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-btn{
+    background-color: tomato;
+    color: white;
+    padding: 8px 5px;
+    border-radius: 4px;
+   margin-right: 30px;
+    margin-top: 30%;
+    
+}
+.h-btn2{
+    background-color: tomato;
+    color: white;
+    padding: 4px 5px;
+    border-radius: 4px;
+    margin-top: auto;
+}
+.h-btn:hover{
+    animation: all ease-in-out 2000ms ;
+    background-color: brown;
+   
+}

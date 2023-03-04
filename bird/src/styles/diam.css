@@ -1,0 +1,31 @@
+.dmain{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 3%;
+    text-align: center;
+}
+
+.d-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    width: 20%;
+   
+}
+.d-cards:hover{
+   
+    cursor: pointer;
+   
+}
+.d-cards img{
+    width: 95%;
+}
+.d-cards img:hover{
+    transition:all ease-in-out 1000ms;
+    width: 100% ;
+}
+
+.d-cards h2{
+    font-weight: 500;
+}
