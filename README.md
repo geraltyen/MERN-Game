@@ -12,10 +12,10 @@ This is Mern stack game Developed Under 48 hrs with a team of 4
 
 | Collaborators
 
-|R Giri Reddy\n
-|Vikram Navik\n
-|Mohit Raj Singh\n
-|Sukanta Pramanik\n
+|R Giri Reddy
+|Vikram Navik
+|Mohit Raj Singh
+|Sukanta Pramanik
 
 
 
