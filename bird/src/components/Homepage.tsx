@@ -1,8 +1,8 @@
 import { Box, Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import "../styles/home.css"
-import Footer from './Footer'
+import styles from "../Style/home.module.css";
+// import Footer from './Footer'
 
 
 type Props = {}
@@ -23,18 +23,33 @@ const Homepage = (props: Props) => {
     audio2.play()
   }
 
+  // useEffect(()=>{
+
+  // },[])
+
 const handleClick1=()=>{
   route("/game")
   start()
 }
 
   return (
-    <div className='main-home'>
-        <div className='hmpage'>
+    <div className={styles.mainhome}>
+        <div className={styles.hmpage}>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
+          <div className={styles.bubblediv}><span className={styles.bubble}></span></div>
         
        
-       <Button className='h-btn' colorScheme='blue' onClick={handleClick1}>Start The  Game</Button>
-       <Button className='h-btn2' colorScheme='blue' onClick={()=>{onOpen();back()}}>Instructions</Button>
+       <Button style={{fontSize:"2vw", marginTop:"30%"}} colorScheme={'blue'} onClick={handleClick1}>Start The  Game</Button>
+       <Button style={{fontSize:"2vw", marginTop:"30%", marginLeft:"1vw"}} colorScheme={"blue"} onClick={()=>{onOpen();back()}}>Instructions</Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
@@ -58,7 +73,7 @@ const handleClick1=()=>{
         </div>
         
         
-        <Footer/>
+        {/* <Footer/> */}
         
     </div>
     
