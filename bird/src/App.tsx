@@ -5,20 +5,26 @@ import Navbar from './components/Navbar';
 import Game from './components/game';
 import Button from "./components/Button";
 import Homepage from './components/Homepage';
-import Animated from './components/Animated';
 import Footer from './components/Footer';
+
+
+import Ownfile from './components/Ownfile';
+import AllRoutes from './Allroutes/Routes';
+
 
 
 function App() {
   return (
     <>
-
+      
       <Navbar/>
-      <Button/>
-      <Homepage/>
-      <Animated/>
-      <Game />
-      <Footer/>
+
+      {/* <Homepage/> */}
+      {/* <Animated/> */}
+      {/* <Game /> */}
+      {/* <Footer/> */}
+      <AllRoutes />
+
       
     </>
   );
